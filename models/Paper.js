@@ -4,10 +4,22 @@ const paperSchema = new mongoose.Schema({
   filename: String,
   content: String,
   summary: String,
-  plagiarismReport: String,
-  aiConfidence: String,
-  humanizedText: String,
-  createdAt: { type: Date, default: Date.now }
+
+  chatHistory: [
+    {
+      role: String,
+      message: String,
+      timestamp: {
+        type: Date,
+        default: Date.now
+      }
+    }
+  ],
+
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 });
 
 export default mongoose.model('Paper', paperSchema);

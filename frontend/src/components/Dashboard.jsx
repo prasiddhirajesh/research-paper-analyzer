@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { UploadSimple, Detective, Robot, User, CheckCircle, SpinnerGap, Moon, Sun, FilePdf } from '@phosphor-icons/react';
-
+import Chatbot from './chatbox';
 const Dashboard = () => {
   const [file, setFile] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -11,7 +11,7 @@ const Dashboard = () => {
   const [actionResult, setActionResult] = useState(null);
   const [actionTitle, setActionTitle] = useState('');
   const [isDarkMode, setIsDarkMode] = useState(false);
-
+  const [currentPaperId, setCurrentPaperId] = useState(null);
   const fileInputRef = useRef(null);
 
   useEffect(() => {
@@ -45,6 +45,7 @@ const Dashboard = () => {
 
       if (response.ok) {
         setPaperId(data.data._id);
+        setCurrentPaperId(data.data._id);
         setSummary(data.summary);
       } else {
         alert(data.error || 'Upload failed');
@@ -205,6 +206,12 @@ const Dashboard = () => {
                     </div>
                   )}
                 </div>
+             )}
+             {/* AI CHATBOT */}
+             {currentPaperId && (
+             <div className="mt-12">
+               <Chatbot paperId={currentPaperId} />
+             </div>
              )}
           </div>
         )}

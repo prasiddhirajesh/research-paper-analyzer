@@ -6,7 +6,7 @@ This document serves as a deep dive into the architectural workflow, the precise
 
 ---
 
-## 🛠️ Comprehensive Tech Stack
+## Comprehensive Tech Stack
 
 ### Frontend Architecture
 - **Framework**: React 19 (scaffolded via Vite for HMR and optimized builds)
