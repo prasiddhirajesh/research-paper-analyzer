@@ -1,31 +1,31 @@
-# ScholarInsight 🎓✨
+# ScholarInsight 
 
 > **The Digital Curator for Academic Research**  
 > Transform complex PDF manuscripts into actionable insights through AI-powered parsing, plagiarism detection, tone humanization, and document-grounded chat.
 
-🌐 **Live Application**: [https://research-paper-analyzer-mu.vercel.app/](https://research-paper-analyzer-mu.vercel.app/)
+**Live Application**: [https://research-paper-analyzer-mu.vercel.app/](https://research-paper-analyzer-mu.vercel.app/)
 
 ---
 
-## 🌟 Overview
+## Overview
 
 **ScholarInsight** is a full-stack web application designed for students, professors, and researchers. It provides a fluid workspace to upload academic manuscripts (PDFs), automatically extract structural text, and harness Google's state-of-the-art **Gemini 2.5 Flash** model to synthesize executive summaries, run deep analytical checks, and engage in interactive QA with papers.
 
 ---
 
-## ✨ Key Features
+## Key Features-
 
-- 📄 **PDF Extraction & Auto-Summarization**: Upload any research manuscript and instantly extract structured bullet-point summaries.
-- 🤖 **Interactive Paper Chatbot**: Ask questions directly to your manuscript with a grounded AI assistant and persistent chat history.
-- 🔍 **Plagiarism & Integrity Scanner**: Scan paper text for potential duplication and common source patterns.
-- ⚡ **AI Generation Detection**: Evaluate likelihood scores of AI-generated content in academic writing.
-- ✍️ **Academic Tone Humanizer**: Refine robotic or overly technical text into natural, professional prose.
-- 📜 **Research History Archive**: Persist historical analyses, summaries, and chat sessions in MongoDB.
-- 🌙 **Dynamic Theme System**: Toggle seamlessly between dark and light modes with glassmorphic UI elements.
+- **PDF Extraction & Auto-Summarization**: Upload any research manuscript and instantly extract structured bullet-point summaries.
+- **Interactive Paper Chatbot**: Ask questions directly to your manuscript with a grounded AI assistant and persistent chat history.
+- **Plagiarism & Integrity Scanner**: Scan paper text for potential duplication and common source patterns.
+- **AI Generation Detection**: Evaluate likelihood scores of AI-generated content in academic writing.
+- **Academic Tone Humanizer**: Refine robotic or overly technical text into natural, professional prose.
+- **Research History Archive**: Persist historical analyses, summaries, and chat sessions in MongoDB.
+- **Dynamic Theme System**: Toggle seamlessly between dark and light modes with glassmorphic UI elements.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Framework**: React 19 + Vite
@@ -43,7 +43,7 @@
 
 ---
 
-## 🚀 Live Deployments
+## Live Deployments
 
 | Component | Platform | Status | URL |
 | :--- | :--- | :--- | :--- |
@@ -52,7 +52,7 @@
 
 ---
 
-## 💻 Local Setup & Development
+## Local Setup & Development
 
 ### 1. Prerequisites
 - Node.js (`v18+`)
