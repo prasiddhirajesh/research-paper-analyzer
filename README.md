@@ -93,8 +93,3 @@ npm run dev
 The application will be accessible at:
 - **Frontend**: `http://localhost:5173`
 - **Backend API**: `http://localhost:5000`
-
----
-
-## 📄 License
-This project is licensed under the ISC License.
