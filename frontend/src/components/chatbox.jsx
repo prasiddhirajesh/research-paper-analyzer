@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
+import { API_BASE_URL } from '../apiConfig';
+
 export default function Chatbot({ paperId }) {
 
     const [question, setQuestion] = useState('');
@@ -18,7 +20,7 @@ export default function Chatbot({ paperId }) {
         const fetchChatHistory = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:5000/api/chat-history/${paperId}`
+                    `${API_BASE_URL}/api/chat-history/${paperId}`
                 );
                 if (response.data.success) {
                     setMessages(response.data.chatHistory);
@@ -54,7 +56,7 @@ export default function Chatbot({ paperId }) {
         try {
 
             const response = await axios.post(
-                `http://localhost:5000/api/chat/${paperId}`,
+                `${API_BASE_URL}/api/chat/${paperId}`,
                 {
                     question
                 }

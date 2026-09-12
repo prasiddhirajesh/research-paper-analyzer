@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ClockCounterClockwise, CaretDown, CaretUp } from '@phosphor-icons/react';
+import { API_BASE_URL } from '../apiConfig';
 
 function formatMarkdown(text) {
   if (!text) return "No content available.";
@@ -21,7 +22,7 @@ const History = () => {
   const [expandedId, setExpandedId] = useState(null);
 
   useEffect(() => {
-    fetch('/api/papers')
+    fetch(`${API_BASE_URL}/api/papers`)
       .then(res => res.json())
       .then(data => {
         setPapers(data);

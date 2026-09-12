@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { UploadSimple, Detective, Robot, User, CheckCircle, SpinnerGap, Moon, Sun, FilePdf } from '@phosphor-icons/react';
 import Chatbot from './chatbox';
+import { API_BASE_URL } from '../apiConfig';
+
 const Dashboard = () => {
   const [file, setFile] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -37,7 +39,7 @@ const Dashboard = () => {
     formData.append('file', selectedFile);
 
     try {
-      const response = await fetch('/api/upload', {
+      const response = await fetch(`${API_BASE_URL}/api/upload`, {
         method: 'POST',
         body: formData
       });
@@ -66,7 +68,7 @@ const Dashboard = () => {
     setActionResult(null);
 
     try {
-      const response = await fetch(`/api/analyze/${actionType}`, {
+      const response = await fetch(`${API_BASE_URL}/api/analyze/${actionType}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id: paperId })
